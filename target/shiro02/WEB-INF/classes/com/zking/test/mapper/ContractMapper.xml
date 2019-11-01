@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zking.test.mapper.ContractMapper" >
+  <resultMap id="BaseResultMap" type="com.zking.test.model.Contract" >
+    <constructor >
+      <idArg column="contract_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="admin_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="customer_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="contract_content" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="contract_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+
+  <resultMap id="row" type="com.zking.test.model.ContractManagement" >
+    <id column="admin_id"  property="adminId"  jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="admin_name" property="adminName"   jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="admin_password" property="adminPassword" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="admin_salt"  property="adminSalt" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="admin_locked"  property="adminLocked" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    <result column="create_datetime"  property="createDatetime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    <result column="customer_id" property="customerId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="customer_name" property="customerName" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_tel" property="customerTel" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="customer_password" property="customerPassword" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_salt" property="customerSalt" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_level" property="customerLevel" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    <result column="customer_id_number" property="customerIdNumber" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_address" property="customerAddress" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_bank" property="customerBank" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_time" property="customerTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    <result column="dict_id" property="dictId" javaType="java.lang.Long" jdbcType="BIGINT" />
+    <result column="dict_type" property="dictType" javaType="java.lang.String" jdbcType="VARCHAR" />
+    <result column="dict_item" property="dictItem" javaType="java.lang.String" jdbcType="VARCHAR" />
+    <result column="dict_value" property="dictValue" javaType="java.lang.String" jdbcType="VARCHAR" />
+    <result column="dict_is_editable" property="dictIsEditable" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="contract_id" property="contractId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="contract_content" property="contractContent" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="contract_time" property="contractTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    <result column="customer_borrow_money" property="customerBorrowMoney" jdbcType="VARCHAR" javaType="java.lang.String"/>
+    <result column="customer_periods" property="customerPeriods" javaType="java.lang.Integer" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    contract_id, admin_id, customer_id, contract_content, contract_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_contract
+    where contract_id = #{contractId,jdbcType=BIGINT}
+  </select>
+  <select id="selectByContractManagement" resultMap="row" parameterType="com.zking.test.model.Customer">
+     select distinct ta.*,tcr.*,td.*,tct.*
+      from t_contract tct inner join t_sys_admin ta on tct.admin_id = ta.admin_id
+      inner join t_customer tcr on tct.customer_id = tcr.customer_id
+      inner join t_dict td on tct.contract_content = td.dict_id
+    where
+    <if test="customerName !=null and '' != customerName">
+      tcr.customer_name like concat('%',#{customerName,jdbcType=VARCHAR},'%')
+    </if>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_contract
+    where contract_id = #{contractId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.zking.test.model.Contract" >
+    insert into t_contract (contract_id, admin_id, customer_id, 
+      contract_content, contract_time)
+    values (#{contractId,jdbcType=BIGINT}, #{adminId,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, 
+      #{contractContent,jdbcType=BIGINT}, #{contractTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.test.model.Contract" >
+    insert into t_contract
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="contractId != null" >
+        contract_id,
+      </if>
+      <if test="adminId != null" >
+        admin_id,
+      </if>
+      <if test="customerId != null" >
+        customer_id,
+      </if>
+      <if test="contractContent != null" >
+        contract_content,
+      </if>
+      <if test="contractTime != null" >
+        contract_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="contractId != null" >
+        #{contractId,jdbcType=BIGINT},
+      </if>
+      <if test="adminId != null" >
+        #{adminId,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null" >
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="contractContent != null" >
+        #{contractContent,jdbcType=BIGINT},
+      </if>
+      <if test="contractTime != null" >
+        #{contractTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.test.model.Contract" >
+    update t_contract
+    <set >
+      <if test="adminId != null" >
+        admin_id = #{adminId,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null" >
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="contractContent != null" >
+        contract_content = #{contractContent,jdbcType=BIGINT},
+      </if>
+      <if test="contractTime != null" >
+        contract_time = #{contractTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where contract_id = #{contractId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.test.model.Contract" >
+    update t_contract
+    set admin_id = #{adminId,jdbcType=BIGINT},
+      customer_id = #{customerId,jdbcType=BIGINT},
+      contract_content = #{contractContent,jdbcType=BIGINT},
+      contract_time = #{contractTime,jdbcType=TIMESTAMP}
+    where contract_id = #{contractId,jdbcType=BIGINT}
+  </update>
+</mapper>

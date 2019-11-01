@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zking.test.mapper.AdminMapper" >
+  <resultMap id="BaseResultMap" type="com.zking.test.model.Admin" >
+    <constructor >
+      <idArg column="admin_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="admin_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="admin_password" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="admin_salt" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="admin_locked" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="create_datetime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+
+  <resultMap id="row" type="com.zking.test.model.Admin" >
+    <id column="admin_id"  property="adminId"  jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="admin_name" property="adminName"   jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="admin_password" property="adminPassword" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="admin_salt"  property="adminSalt" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="admin_locked"  property="adminLocked" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    <result column="create_datetime"  property="createDatetime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    admin_id, admin_name, admin_password, admin_salt, admin_locked, create_datetime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_sys_admin
+    where admin_id = #{adminId,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectByAdminname" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select *
+    from t_sys_admin
+    where admin_name = #{adminName,jdbcType=VARCHAR}
+  </select>
+
+  <select id="listPermissionsByUserName" resultType="string" parameterType="com.zking.test.model.Admin">
+    select distinct p.permission
+    from t_sys_admin u inner join t_sys_admin_role ur on u.admin_id = ur.admin_id inner join t_sys_role r on ur.role_id = r.role_id
+    inner join t_sys_role_permission rp on r.role_id = rp.role_id inner join t_sys_permission p on rp.permission_id = p.permission_id
+    where r.available = 1 and p.available = 1 and u.admin_name = #{adminName,jdbcType=VARCHAR}
+  </select>
+  <select id="listRolesByUserName" resultType="string" parameterType="com.zking.test.model.Admin">
+    select distinct r.role_name
+    from t_sys_admin u inner join t_sys_admin_role ur on u.admin_id = ur.admin_id inner join t_sys_role r on ur.role_id = r.role_id
+    where r.available = 1 and u.admin_name = #{adminName,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_sys_admin
+    where admin_id = #{adminId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.zking.test.model.Admin" >
+    insert into t_sys_admin (admin_id, admin_name, admin_password, 
+      admin_salt, admin_locked, create_datetime
+      )
+    values (#{adminId,jdbcType=BIGINT}, #{adminName,jdbcType=VARCHAR}, #{adminPassword,jdbcType=VARCHAR}, 
+      #{adminSalt,jdbcType=VARCHAR}, #{adminLocked,jdbcType=INTEGER}, #{createDatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.test.model.Admin" >
+    insert into t_sys_admin
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="adminId != null" >
+        admin_id,
+      </if>
+      <if test="adminName != null" >
+        admin_name,
+      </if>
+      <if test="adminPassword != null" >
+        admin_password,
+      </if>
+      <if test="adminSalt != null" >
+        admin_salt,
+      </if>
+      <if test="adminLocked != null" >
+        admin_locked,
+      </if>
+      <if test="createDatetime != null" >
+        create_datetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="adminId != null" >
+        #{adminId,jdbcType=BIGINT},
+      </if>
+      <if test="adminName != null" >
+        #{adminName,jdbcType=VARCHAR},
+      </if>
+      <if test="adminPassword != null" >
+        #{adminPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="adminSalt != null" >
+        #{adminSalt,jdbcType=VARCHAR},
+      </if>
+      <if test="adminLocked != null" >
+        #{adminLocked,jdbcType=INTEGER},
+      </if>
+      <if test="createDatetime != null" >
+        #{createDatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.test.model.Admin" >
+    update t_sys_admin
+    <set >
+      <if test="adminName != null" >
+        admin_name = #{adminName,jdbcType=VARCHAR},
+      </if>
+      <if test="adminPassword != null" >
+        admin_password = #{adminPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="adminSalt != null" >
+        admin_salt = #{adminSalt,jdbcType=VARCHAR},
+      </if>
+      <if test="adminLocked != null" >
+        admin_locked = #{adminLocked,jdbcType=INTEGER},
+      </if>
+      <if test="createDatetime != null" >
+        create_datetime = #{createDatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where admin_id = #{adminId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.test.model.Admin" >
+    update t_sys_admin
+    set admin_name = #{adminName,jdbcType=VARCHAR},
+      admin_password = #{adminPassword,jdbcType=VARCHAR},
+      admin_salt = #{adminSalt,jdbcType=VARCHAR},
+      admin_locked = #{adminLocked,jdbcType=INTEGER},
+      create_datetime = #{createDatetime,jdbcType=TIMESTAMP}
+    where admin_id = #{adminId,jdbcType=BIGINT}
+  </update>
+</mapper>
