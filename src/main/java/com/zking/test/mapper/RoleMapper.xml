@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zking.test.mapper.RoleMapper" >
+  <resultMap id="BaseResultMap" type="com.zking.test.model.Role" >
+    <constructor >
+      <idArg column="role_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="role_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="role_desc" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="role_locked" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+
+    <resultMap id="row" type="com.zking.test.model.Role" >
+        <id column="role_id"  property="roleId"  jdbcType="BIGINT" javaType="java.lang.Long" />
+    </resultMap>
+
+  <sql id="Base_Column_List" >
+    role_id, role_name, role_desc, role_locked
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select
+    <include refid="Base_Column_List" />
+    from t_sys_role
+    where role_id = #{roleId,jdbcType=BIGINT}
+  </select>
+
+    <select id="load" resultMap="row" parameterType="com.zking.test.model.Admin">
+        select distinct r.role_id
+        from t_sys_admin u inner join t_sys_admin_role ur on u.admin_id = ur.aid inner join t_sys_role r on ur.rid = r.role_id
+        where  u.admin_name = #{adminName,jdbcType=VARCHAR}
+    </select>
+
+  <delete id="delete" parameterType="java.lang.Long" >
+    delete from t_sys_role
+    where role_id = #{roleId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.zking.test.model.Role" >
+    insert into t_sys_role (role_id, role_name, role_desc,
+      role_locked)
+    values (#{roleId,jdbcType=BIGINT}, #{roleName,jdbcType=VARCHAR}, #{roleDesc,jdbcType=VARCHAR},
+      #{roleLocked,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.test.model.Role" >
+    insert into t_sys_role
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="roleName != null" >
+        role_name,
+      </if>
+      <if test="roleDesc != null" >
+        role_desc,
+      </if>
+      <if test="roleLocked != null" >
+        role_locked,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        #{roleId,jdbcType=BIGINT},
+      </if>
+      <if test="roleName != null" >
+        #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleDesc != null" >
+        #{roleDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="roleLocked != null" >
+        #{roleLocked,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <delete id="doRevokeRoleFromUser" parameterType="com.zking.test.model.Role">
+    delete from t_sys_admin_role where admin_id = #{adminId,jdbcType=BIGINT} and admin_id = #{adminId,jdbcType=BIGINT}
+  </delete>
+  <delete id="doRevokePermissionFromRole" parameterType="com.zking.test.model.Role">
+    delete from t_sys_role_permission where permission_id = #{permissionId,jdbcType=BIGINT} and role_id = #{roleId,jdbcType=BIGINT}
+  </delete>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.test.model.Role" >
+    update t_sys_role
+    <set >
+      <if test="roleName != null" >
+        role_name = #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleDesc != null" >
+        role_desc = #{roleDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="roleLocked != null" >
+        role_locked = #{roleLocked,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where role_id = #{roleId,jdbcType=BIGINT}
+  </update>
+  <insert id="doGrantRoleToUser" parameterType="com.zking.test.model.Role">
+    insert into t_sys_admin_role(admin_id, role_id) values(#{adminId,jdbcType=BIGINT},#{roleId,jdbcType=BIGINT})
+  </insert>
+  <insert id="doGrantPermissionToRole" parameterType="com.zking.test.model.Role">
+    insert into t_sys_role_permission(role_id, permission_id) values(#{roleId,jdbcType=BIGINT},#{permissionId,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.zking.test.model.Role" >
+    update t_sys_role
+    set role_name = #{roleName,jdbcType=VARCHAR},
+      role_desc = #{roleDesc,jdbcType=VARCHAR},
+      role_locked = #{roleLocked,jdbcType=VARCHAR}
+    where role_id = #{roleId,jdbcType=BIGINT}
+  </update>
+</mapper>

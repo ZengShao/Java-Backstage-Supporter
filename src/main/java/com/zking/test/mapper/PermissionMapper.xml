@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zking.test.mapper.PermissionMapper">
+    <resultMap id="BaseResultMap" type="com.zking.test.model.Permission">
+        <constructor>
+            <idArg column="permission_id" jdbcType="BIGINT" javaType="java.lang.Long"/>
+            <arg column="permission_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="level" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="permission_parent_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="available" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="permission" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="icon" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="url" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        </constructor>
+
+    </resultMap>
+
+    <resultMap id="row" type="com.zking.test.model.Permission" >
+        <id column="permission_id"  property="permissionId"  jdbcType="BIGINT" javaType="java.lang.Long" />
+        <result column="permission_name" property="permissionName"   jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result column="level" property="level" jdbcType="INTEGER" javaType="java.lang.Integer" />
+        <result column="permission_parent_id"  property="permissionParentId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+        <result column="available"  property="available" jdbcType="INTEGER" javaType="java.lang.Integer" />
+        <result column="permission"  property="permission" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result column="icon"  property="icon" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result column="url"  property="url" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+    permission_id, permission_name, level, permission_parent_id, available, permission
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from t_sys_permission
+        where permission_id = #{permissionId,jdbcType=BIGINT}
+    </select>
+
+    <select id="selectByPermission"  resultMap="row" parameterType="com.zking.test.model.Admin">
+        select * from t_sys_permission where permission_id in
+        (select  rt.pid   from t_sys_admin_role  ur,t_sys_role_permission  rt  where  ur.aid=#{adminId,jdbcType=LONGNVARCHAR}  and  rt.rid=ur.rid)
+    </select>
+
+    <select id="selectByPermissions"  resultMap="BaseResultMap" parameterType="com.zking.test.model.Permission">
+        		SELECT* from t_sys_permission where permission_parent_id =#{permissionParentId,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_sys_permission
+    where permission_id = #{permissionId,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.zking.test.model.Permission">
+    insert into t_sys_permission (permission_id, permission_name, level, 
+      permission_parent_id, available, permission
+      )
+    values (#{permissionId,jdbcType=BIGINT}, #{permissionName,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, 
+      #{permissionParentId,jdbcType=INTEGER}, #{available,jdbcType=INTEGER}, #{permission,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.zking.test.model.Permission">
+        insert into t_sys_permission
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="permissionId != null">
+                permission_id,
+            </if>
+            <if test="permissionName != null">
+                permission_name,
+            </if>
+            <if test="level != null">
+                level,
+            </if>
+            <if test="permissionParentId != null">
+                permission_parent_id,
+            </if>
+            <if test="available != null">
+                available,
+            </if>
+            <if test="permission != null">
+                permission,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="permissionId != null">
+                #{permissionId,jdbcType=BIGINT},
+            </if>
+            <if test="permissionName != null">
+                #{permissionName,jdbcType=VARCHAR},
+            </if>
+            <if test="level != null">
+                #{level,jdbcType=INTEGER},
+            </if>
+            <if test="permissionParentId != null">
+                #{permissionParentId,jdbcType=INTEGER},
+            </if>
+            <if test="available != null">
+                #{available,jdbcType=INTEGER},
+            </if>
+            <if test="permission != null">
+                #{permission,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.zking.test.model.Permission">
+        update t_sys_permission
+        <set>
+            <if test="permissionName != null">
+                permission_name = #{permissionName,jdbcType=VARCHAR},
+            </if>
+            <if test="level != null">
+                level = #{level,jdbcType=INTEGER},
+            </if>
+            <if test="permissionParentId != null">
+                permission_parent_id = #{permissionParentId,jdbcType=INTEGER},
+            </if>
+            <if test="available != null">
+                available = #{available,jdbcType=INTEGER},
+            </if>
+            <if test="permission != null">
+                permission = #{permission,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where permission_id = #{permissionId,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.zking.test.model.Permission">
+    update t_sys_permission
+    set permission_name = #{permissionName,jdbcType=VARCHAR},
+      level = #{level,jdbcType=INTEGER},
+      permission_parent_id = #{permissionParentId,jdbcType=INTEGER},
+      available = #{available,jdbcType=INTEGER},
+      permission = #{permission,jdbcType=VARCHAR}
+    where permission_id = #{permissionId,jdbcType=BIGINT}
+  </update>
+</mapper>
