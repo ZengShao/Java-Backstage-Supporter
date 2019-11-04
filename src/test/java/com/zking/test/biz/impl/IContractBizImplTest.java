@@ -21,19 +21,5 @@ public class IContractBizImplTest {
     public void tearDown() throws Exception {
     }
 
-    @Test
-    public void selectByContractManagement() throws Exception {
-
-        Customer customer = new Customer();
-
-        PageBean pageBean = new PageBean();
-
-        IContractBiz iContractBiz = new IContractBizImpl();
-        List<ContractManagement> objects = iContractBiz.selectByContractManagement(customer, null);
-        for (ContractManagement c:objects
-             ) {
-            System.out.println(c);
-        }
-    }
 
 }

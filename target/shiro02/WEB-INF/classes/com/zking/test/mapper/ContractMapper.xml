@@ -12,7 +12,6 @@
   </resultMap>
 
   <resultMap id="row" type="com.zking.test.model.ContractManagement" >
-    <id column="admin_id"  property="adminId"  jdbcType="BIGINT" javaType="java.lang.Long" />
     <result column="admin_name" property="adminName"   jdbcType="VARCHAR" javaType="java.lang.String" />
     <result column="admin_password" property="adminPassword" jdbcType="VARCHAR" javaType="java.lang.String" />
     <result column="admin_salt"  property="adminSalt" jdbcType="VARCHAR" javaType="java.lang.String" />
@@ -49,14 +48,11 @@
     where contract_id = #{contractId,jdbcType=BIGINT}
   </select>
   <select id="selectByContractManagement" resultMap="row" parameterType="com.zking.test.model.Customer">
-     select distinct ta.*,tcr.*,td.*,tct.*
+     select ta.*,tcr.*,td.*,tct.*
       from t_contract tct inner join t_sys_admin ta on tct.admin_id = ta.admin_id
       inner join t_customer tcr on tct.customer_id = tcr.customer_id
       inner join t_dict td on tct.contract_content = td.dict_id
-    where
-    <if test="customerName !=null and '' != customerName">
-      tcr.customer_name like concat('%',#{customerName,jdbcType=VARCHAR},'%')
-    </if>
+    where tcr.customer_name like concat('%',#{customerName,jdbcType=VARCHAR},'%')
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from t_contract

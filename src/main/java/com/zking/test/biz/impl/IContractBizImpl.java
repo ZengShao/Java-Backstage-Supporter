@@ -51,11 +51,11 @@ public class IContractBizImpl implements IContractBiz {
 
     @Override
     public List<ContractManagement> selectByContractManagement(Customer customer, PageBean pageBean) {
-        if (null == pageBean&&!pageBean.isPagination()){
+        if (null != pageBean && pageBean.isPagination()){
             PageHelper.startPage(pageBean.getPage(),pageBean.getRows());
         }
         List<ContractManagement> objects = contractMapper.selectByContractManagement(customer);
-        if (null == pageBean && !pageBean.isPagination()){
+        if (null != pageBean && pageBean.isPagination()){
             PageInfo pageInfo = new PageInfo(objects);
             pageBean.setTotal(pageInfo.getTotal()+"");
         }

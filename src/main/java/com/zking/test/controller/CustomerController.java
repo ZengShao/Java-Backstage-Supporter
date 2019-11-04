@@ -1,10 +1,6 @@
 package com.zking.test.controller;
 
-
-import com.zking.test.biz.IContractBiz;
-import com.zking.test.model.Admin;
-import com.zking.test.model.Contract;
-import com.zking.test.model.ContractManagement;
+import com.zking.test.biz.ICustomer;
 import com.zking.test.model.Customer;
 import com.zking.test.util.JsonData;
 import com.zking.test.util.PageBean;
@@ -15,16 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
-
 @Controller
-@RequestMapping("/Contract")
-public class ContractController {
+@RequestMapping("/Customer")
+public class CustomerController {
 
     @Autowired
-    IContractBiz iContractBiz;
+    ICustomer iCustomer;
 
-    @RequestMapping("/ContractManagement")
-    public @ResponseBody JsonData login(Model model, Contract contract,PageBean pageBean,Customer customer) {
+    @RequestMapping("/customer")
+    public @ResponseBody JsonData login(Model model,PageBean pageBean, Customer customer) {
         JsonData jsonData = new JsonData();
 
         if(null == customer.getCustomerName()){
@@ -35,17 +30,23 @@ public class ContractController {
             System.out.println(customer.getCustomerName());
         }
 
-
-
-
-
-        List<ContractManagement> objects = iContractBiz.selectByContractManagement(customer,pageBean);
+        List<Customer> objects = iCustomer.selectByCustomer(customer,pageBean);
 
         jsonData.setRows(pageBean.getRows());
         jsonData.setTotal(pageBean.getTotal());
         jsonData.setPage(pageBean.getPage());
         jsonData.setResult(objects);
 
+        return jsonData;
+    }
+
+    @RequestMapping("/SetCustomerStatus")
+    public @ResponseBody JsonData login(Model model,Customer customer) {
+        JsonData jsonData = new JsonData();
+
+        int i = iCustomer.updateByCustomerStatus(customer);
+
+        jsonData.setCode(i);
         return jsonData;
     }
 }

@@ -27,8 +27,16 @@ public class Customer {
 
     private Integer customerPeriods;
 
+    private String customerStatus;
 
-    public Customer(Long customerId, String customerName, Long customerTel, String customerPassword, String customerSalt, Integer customerLevel, String customerIdNumber, String customerAddress, String customerBank, Date customerTime, String customerBorrowMoney, Integer customerPeriods) {
+    private String customerCardPhoto;
+
+    private String customerBankPhoto;
+
+    public Customer() {
+    }
+
+    public Customer(Long customerId, String customerName, Long customerTel, String customerPassword, String customerSalt, Integer customerLevel, String customerIdNumber, String customerAddress, String customerBank, Date customerTime, String customerBorrowMoney, Integer customerPeriods, String customerStatus, String customerCardPhoto, String customerBankPhoto) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerTel = customerTel;
@@ -41,26 +49,9 @@ public class Customer {
         this.customerTime = customerTime;
         this.customerBorrowMoney = customerBorrowMoney;
         this.customerPeriods = customerPeriods;
-    }
-
-    public Integer getCustomerPeriods() {
-        return customerPeriods;
-    }
-
-    public void setCustomerPeriods(Integer customerPeriods) {
-        this.customerPeriods = customerPeriods;
-    }
-
-    public String getCustomerBorrowMoney() {
-        return customerBorrowMoney;
-    }
-
-    public void setCustomerBorrowMoney(String customerBorrowMoney) {
-        this.customerBorrowMoney = customerBorrowMoney;
-    }
-
-    public Customer() {
-        super();
+        this.customerStatus = customerStatus;
+        this.customerCardPhoto = customerCardPhoto;
+        this.customerBankPhoto = customerBankPhoto;
     }
 
     public Long getCustomerId() {
@@ -141,5 +132,45 @@ public class Customer {
 
     public void setCustomerTime(Date customerTime) {
         this.customerTime = customerTime;
+    }
+
+    public String getCustomerBorrowMoney() {
+        return customerBorrowMoney;
+    }
+
+    public void setCustomerBorrowMoney(String customerBorrowMoney) {
+        this.customerBorrowMoney = customerBorrowMoney;
+    }
+
+    public Integer getCustomerPeriods() {
+        return customerPeriods;
+    }
+
+    public void setCustomerPeriods(Integer customerPeriods) {
+        this.customerPeriods = customerPeriods;
+    }
+
+    public String getCustomerStatus() {
+        return customerStatus;
+    }
+
+    public void setCustomerStatus(String customerStatus) {
+        this.customerStatus = customerStatus;
+    }
+
+    public String getCustomerCardPhoto() {
+        return customerCardPhoto;
+    }
+
+    public void setCustomerCardPhoto(String customerCardPhoto) {
+        this.customerCardPhoto = customerCardPhoto;
+    }
+
+    public String getCustomerBankPhoto() {
+        return customerBankPhoto;
+    }
+
+    public void setCustomerBankPhoto(String customerBankPhoto) {
+        this.customerBankPhoto = customerBankPhoto;
     }
 }

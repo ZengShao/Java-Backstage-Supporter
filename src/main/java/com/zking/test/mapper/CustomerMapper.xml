@@ -15,17 +15,41 @@
       <arg column="customer_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
       <arg column="customer_borrow_money" jdbcType="VARCHAR" javaType="java.lang.String"/>
       <arg column="customer_periods" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="customer_status" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="customer_card_photo" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="customer_bank_photo" jdbcType="VARCHAR" javaType="java.lang.String" />
     </constructor>
   </resultMap>
+
+  <resultMap id="row" type="com.zking.test.model.Customer" >
+    <id column="customer_id" property="customerId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="customer_name" property="customerName" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_tel" property="customerTel" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="customer_password" property="customerPassword" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_salt" property="customerSalt" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_level" property="customerLevel" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    <result column="customer_id_number" property="customerIdNumber" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_address" property="customerAddress" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_bank" property="customerBank" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_time" property="customerTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    <result column="customer_borrow_money" property="customerBorrowMoney" jdbcType="VARCHAR" javaType="java.lang.String"/>
+    <result column="customer_periods" property="customerPeriods" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="customer_status" property="customerStatus" javaType="java.lang.String" jdbcType="VARCHAR" />
+    <result column="customer_card_photo" property="customerCardPhoto" javaType="java.lang.String" jdbcType="VARCHAR" />
+    <result column="customer_bank_photo" property="customerBankPhoto" javaType="java.lang.String" jdbcType="VARCHAR" />
+  </resultMap>
   <sql id="Base_Column_List" >
-    customer_id, customer_name, customer_tel, customer_password, customer_salt, customer_level, 
-    customer_id_number, customer_address, customer_bank, customer_time,customer_borrow_money,customer_periods
+    customer_id, customer_name, customer_tel, customer_password, customer_salt, customer_level,
+    customer_id_number, customer_address, customer_bank, customer_time,customer_borrow_money,customer_periods,customer_status,customer_bank_photo,customer_card_photo
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
     from t_customer
     where customer_id = #{customerId,jdbcType=BIGINT}
+  </select>
+  <select id="selectByCustomer" resultMap="row" parameterType="com.zking.test.model.Customer">
+    select * from t_customer where customer_name like concat('%',#{customerName,jdbcType=VARCHAR},'%')
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from t_customer
@@ -152,6 +176,11 @@
       customer_address = #{customerAddress,jdbcType=VARCHAR},
       customer_bank = #{customerBank,jdbcType=VARCHAR},
       customer_time = #{customerTime,jdbcType=TIMESTAMP}
+    where customer_id = #{customerId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByCustomerStatus" parameterType="com.zking.test.model.Customer">
+    update t_customer
+    set customer_status = #{customerStatus,jdbcType=VARCHAR}
     where customer_id = #{customerId,jdbcType=BIGINT}
   </update>
 </mapper>
