@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zking.test.mapper.ProductMapper" >
+  <resultMap id="BaseResultMap" type="com.zking.test.model.Product" >
+    <constructor >
+      <idArg column="pro_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="pro_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="pro_money" jdbcType="REAL" javaType="java.lang.Float" />
+      <arg column="pro_periods" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="pro_content" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="pro_photo" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="pro_level" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pro_id, pro_name, pro_money, pro_periods, pro_content, pro_photo, pro_level
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_product
+    where pro_id = #{proId,jdbcType=BIGINT}
+  </select>
+  <select id="selectByProduct" resultMap="BaseResultMap" parameterType="com.zking.test.model.Product">
+    select * from t_product where pro_name like concat('%',#{proName,jdbcType=VARCHAR},'%') group by pro_name
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_product
+    where pro_id = #{proId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.zking.test.model.Product" >
+    insert into t_product (pro_id, pro_name, pro_money, 
+      pro_periods, pro_content, pro_photo,
+      pro_level)
+    values (#{proId,jdbcType=BIGINT}, #{proName,jdbcType=VARCHAR}, #{proMoney,jdbcType=REAL}, 
+      #{proPeriods,jdbcType=INTEGER}, #{proContent,jdbcType=VARCHAR}, #{proPhoto,jdbcType=VARCHAR},
+      #{proLevel,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zking.test.model.Product" >
+    insert into t_product
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="proId != null" >
+        pro_id,
+      </if>
+      <if test="proName != null" >
+        pro_name,
+      </if>
+      <if test="proMoney != null" >
+        pro_money,
+      </if>
+      <if test="proPeriods != null" >
+        pro_periods,
+      </if>
+      <if test="proContent != null" >
+        pro_content,
+      </if>
+      <if test="proPhoto != null" >
+        pro_photo,
+      </if>
+      <if test="proLevel != null" >
+        pro_level,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="proId != null" >
+        #{proId,jdbcType=BIGINT},
+      </if>
+      <if test="proName != null" >
+        #{proName,jdbcType=VARCHAR},
+      </if>
+      <if test="proMoney != null" >
+        #{proMoney,jdbcType=REAL},
+      </if>
+      <if test="proPeriods != null" >
+        #{proPeriods,jdbcType=INTEGER},
+      </if>
+      <if test="proContent != null" >
+        #{proContent,jdbcType=VARCHAR},
+      </if>
+      <if test="proPhoto != null" >
+        #{proPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="proLevel != null" >
+        #{proLevel,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.test.model.Product" >
+    update t_product
+    <set >
+      <if test="proName != null" >
+        pro_name = #{proName,jdbcType=VARCHAR},
+      </if>
+      <if test="proMoney != null" >
+        pro_money = #{proMoney,jdbcType=REAL},
+      </if>
+      <if test="proPeriods != null" >
+        pro_periods = #{proPeriods,jdbcType=INTEGER},
+      </if>
+      <if test="proContent != null" >
+        pro_content = #{proContent,jdbcType=VARCHAR},
+      </if>
+      <if test="proPhoto != null" >
+        pro_photo = #{proPhoto,jdbcType=VARCHAR},
+      </if>
+      <if test="proLevel != null" >
+        pro_level = #{proLevel,jdbcType=INTEGER},
+      </if>
+    </set>
+    where pro_id = #{proId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.test.model.Product" >
+    update t_product
+    set pro_name = #{proName,jdbcType=VARCHAR},
+      pro_money = #{proMoney,jdbcType=REAL},
+      pro_periods = #{proPeriods,jdbcType=INTEGER},
+      pro_content = #{proContent,jdbcType=VARCHAR},
+      pro_photo = #{proPhoto,jdbcType=VARCHAR},
+      pro_level = #{proLevel,jdbcType=INTEGER}
+    where pro_id = #{proId,jdbcType=BIGINT}
+  </update>
+</mapper>
