@@ -2,6 +2,9 @@ package com.zking.test.biz;
 
 import com.zking.test.model.Role;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
 @Transactional
 public interface IRoleBiz {
     int add(Role role);
@@ -12,6 +15,8 @@ public interface IRoleBiz {
     int doRevokeRoleFromUser(Role role);//从用户收回角色
     int doGrantPermissionToRole(Role role);//给角色分配权限
     int doRevokePermissionFromRole(Role role);//从角色收回权限
+
+    List<Role> selectByRoleDesc(Role role);
 
     @Transactional(readOnly = true)
     Role load(String admin);

@@ -1,10 +1,25 @@
 package com.zking.test.model;
 
 import java.util.Date;
-import java.util.List;
 
-public class Customer {
+public class RepaymentM {
+    private Long repaymentId;
+
     private Long customerId;
+
+    private Long applyId;
+
+    private Date repaymentTime;
+
+    private String repaymentMoney;
+
+    private String residueMoney;
+
+    private Long adminId;
+
+    private Integer residueState;
+
+
 
     private String customerName;
 
@@ -34,13 +49,15 @@ public class Customer {
 
     private String customerBankPhoto;
 
-    private List<CustomerM> contractManagementList;
-
-    public Customer() {
-    }
-
-    public Customer(Long customerId, String customerName, Long customerTel, String customerPassword, String customerSalt, Integer customerLevel, String customerIdNumber, String customerAddress, String customerBank, Date customerTime, String customerBorrowMoney, Integer customerPeriods, String customerStatus, String customerCardPhoto, String customerBankPhoto) {
+    public RepaymentM(Long repaymentId, Long customerId, Long applyId, Date repaymentTime, String repaymentMoney, String residueMoney, Long adminId, Integer residueState, String customerName, Long customerTel, String customerPassword, String customerSalt, Integer customerLevel, String customerIdNumber, String customerAddress, String customerBank, Date customerTime, String customerBorrowMoney, Integer customerPeriods, String customerStatus, String customerCardPhoto, String customerBankPhoto) {
+        this.repaymentId = repaymentId;
         this.customerId = customerId;
+        this.applyId = applyId;
+        this.repaymentTime = repaymentTime;
+        this.repaymentMoney = repaymentMoney;
+        this.residueMoney = residueMoney;
+        this.adminId = adminId;
+        this.residueState = residueState;
         this.customerName = customerName;
         this.customerTel = customerTel;
         this.customerPassword = customerPassword;
@@ -57,12 +74,72 @@ public class Customer {
         this.customerBankPhoto = customerBankPhoto;
     }
 
+    public RepaymentM() {
+        super();
+    }
+
+    public Long getRepaymentId() {
+        return repaymentId;
+    }
+
+    public void setRepaymentId(Long repaymentId) {
+        this.repaymentId = repaymentId;
+    }
+
     public Long getCustomerId() {
         return customerId;
     }
 
     public void setCustomerId(Long customerId) {
         this.customerId = customerId;
+    }
+
+    public Long getApplyId() {
+        return applyId;
+    }
+
+    public void setApplyId(Long applyId) {
+        this.applyId = applyId;
+    }
+
+    public Date getRepaymentTime() {
+        return repaymentTime;
+    }
+
+    public void setRepaymentTime(Date repaymentTime) {
+        this.repaymentTime = repaymentTime;
+    }
+
+    public String getRepaymentMoney() {
+        return repaymentMoney;
+    }
+
+    public void setRepaymentMoney(String repaymentMoney) {
+        this.repaymentMoney = repaymentMoney;
+    }
+
+    public String getResidueMoney() {
+        return residueMoney;
+    }
+
+    public void setResidueMoney(String residueMoney) {
+        this.residueMoney = residueMoney;
+    }
+
+    public Long getAdminId() {
+        return adminId;
+    }
+
+    public void setAdminId(Long adminId) {
+        this.adminId = adminId;
+    }
+
+    public Integer getResidueState() {
+        return residueState;
+    }
+
+    public void setResidueState(Integer residueState) {
+        this.residueState = residueState;
     }
 
     public String getCustomerName() {

@@ -2,40 +2,73 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="shiro02:war exploded" />
+      <artifact name="shiro02:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8963076-46df-434f-9a1c-3281c10393ac" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/controller/CustomerController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IApplyBiz.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IRepaymentBiz.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ApplyBizImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IRepaymentBizImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/controller/ApplyController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/controller/RepaymentController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/controller/RoleController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ApplyMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ApplyMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/LedgerMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/LedgerMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RepaymentMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RepaymentMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/model/Apply.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/model/CustomerM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/model/Ledger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/model/Repayment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/model/RepaymentM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/upload.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/biz/ICustomer.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/biz/ICustomer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/biz/impl/IContractBizImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/biz/impl/IContractBizImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/biz/IRoleBiz.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/biz/IRoleBiz.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/biz/impl/ICustomerImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/biz/impl/ICustomerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/controller/ContractController.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/controller/ContractController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/biz/impl/RoleBizImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/biz/impl/RoleBizImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/controller/AdminController.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/controller/AdminController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/controller/AdminInfoController.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/controller/AdminInfoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/controller/CustomerController.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/controller/CustomerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/CustomerMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/CustomerMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/RoleMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/RoleMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/model/Customer.class" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/model/Customer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/ICustomer.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/ICustomer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/impl/IContractBizImpl.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/impl/IContractBizImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/IRoleBiz.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/IRoleBiz.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/impl/ICustomerImpl.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/impl/ICustomerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/controller/ContractController.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/controller/ContractController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/impl/RoleBizImpl.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/biz/impl/RoleBizImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/controller/AdminController.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/controller/AdminController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/controller/AdminInfoController.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/controller/AdminInfoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/controller/CustomerController.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/controller/CustomerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/CustomerMapper.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/CustomerMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/RoleMapper.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/RoleMapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/model/Customer.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/model/Customer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/util/PageBean.class" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/util/PageBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/zking/test/biz/impl/IContractBizImplTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/zking/test/biz/impl/IContractBizImplTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/zking/test/biz/IAdminBizTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/zking/test/biz/IAdminBizTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/ICustomer.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/ICustomer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IContractBizImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IContractBizImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IRoleBiz.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IRoleBiz.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ICustomerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ICustomerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/controller/ContractController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/controller/ContractController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ContractMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ContractMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/RoleBizImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/RoleBizImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/controller/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/controller/CustomerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zking/test/model/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/com/zking/test/model/Customer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/zking/test/biz/impl/IContractBizImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/zking/test/biz/impl/IContractBizImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/ContractMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/ContractMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/zking/test/biz/IAdminBizTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/zking/test/biz/IAdminBizTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/CustomerMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/CustomerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/ContractMapper.xml" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/ContractMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/zking/test/mapper/RoleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring.xml" afterPath="$PROJECT_DIR$/target/classes/spring.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/CustomerMapper.xml" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/CustomerMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/com/zking/test/mapper/RoleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/spring.xml" afterPath="$PROJECT_DIR$/target/shiro02/WEB-INF/classes/spring.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,75 +98,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomerMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.xml">
+      <file leaf-file-name="RepaymentMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RepaymentMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="185" column="9" lean-forward="true" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
+            <state relative-caret-position="250">
+              <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
               <folding>
-                <marker date="1572860767848" expanded="true" signature="3792:3914" ph="select from t_customer" />
-                <marker date="1572860767848" expanded="true" signature="4026:4124" ph="select * fro... t_customer" />
-                <marker date="1572860767848" expanded="true" signature="4208:4284" ph="delete from " />
-                <marker date="1572860767848" expanded="true" signature="4371:4957" ph="insert into t_customer... " />
-                <marker date="1572860767848" expanded="true" signature="7049:8167" ph="update t_cus... " />
-                <marker date="1572860767848" expanded="true" signature="8266:8866" ph="update t_cus... " />
-                <marker date="1572860767848" expanded="true" signature="8968:9100" ph="update t_cus... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/CustomerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="36" />
-              <folding>
-                <element signature="e#3990#3991#0" expanded="true" />
-                <element signature="e#4027#4028#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ICustomer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/ICustomer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ICustomerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ICustomerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-              <folding>
-                <element signature="e#1728#1729#0" expanded="true" />
-                <element signature="e#1798#1799#0" expanded="true" />
+                <marker date="1573288850893" expanded="true" signature="3855:3980" ph="select from t_repayment" />
+                <marker date="1573288850893" expanded="true" signature="4064:4143" ph="delete from " />
+                <marker date="1573288850893" expanded="true" signature="4231:4665" ph="insert into t_repayment... " />
+                <marker date="1573288850893" expanded="true" signature="4778:4951" ph="select a.*,c... t_customer" />
+                <marker date="1573288850893" expanded="true" signature="5061:5256" ph="select a.*,c... t_customer" />
+                <marker date="1573288850893" expanded="true" signature="5366:5561" ph="select a.*,c... t_customer" />
+                <marker date="1573288850893" expanded="true" signature="7240:8078" ph="update t_rep... " />
+                <marker date="1573288850893" expanded="true" signature="8178:8626" ph="update t_rep... " />
+                <marker date="1573288850893" expanded="true" signature="8713:8844" ph="update t_rep... " />
               </folding>
             </state>
           </provider>
@@ -144,8 +123,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -166,33 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/spring-shiro.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/AdminInfoController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/rebel.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/shiro/AdminRealm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/RoleBizImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IRoleBiz.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/zking/test/biz/IRoleBizTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/PermissionController.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/zking/test/biz/IAdminBizTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/AdminMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/AdminBizImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IAdminBiz.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/zking/test/biz/IPermissionBizTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/PermissionMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IPermissionBiz.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/PermissionBizImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/PermissionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/model/Permission.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ContractMapperImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ContractMapperImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/CustomerMapperImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/DictMapperImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IDict.java" />
@@ -211,12 +163,39 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ContractMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/ContractController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zking/test/util/PageBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IProductBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ProductMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/util/FileNameUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IProductBizImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ProductMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/AdminInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IRoleBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/RoleBizImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/zking/test/biz/IAdminBizTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zking/test/model/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ICustomerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/ICustomer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/model/CustomerM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IApplyBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ApplyMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/ApplyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ApplyBizImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/ICustomer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ICustomerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/LedgerMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/model/RepaymentM.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RepaymentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RepaymentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/IRepaymentBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/controller/RepaymentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IRepaymentBizImpl.java" />
       </list>
     </option>
   </component>
@@ -260,8 +239,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="759" />
-    <option name="y" value="23" />
+    <option name="x" value="779" />
+    <option name="y" value="146" />
     <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
@@ -367,37 +346,75 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="shiro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="biz" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../F2FPay_Demo_Java/TradePayDemo" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.zking.test.biz.impl" />
-    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.zking.test.biz" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.zking.test.biz.impl" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zking.test.biz" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\15408\Desktop\Y2金融项目\SSM-master\src\main\java\com\zking\test\model" />
+      <recent name="C:\Users\15408\Desktop\Y2金融项目\SSM-master\src\main\java\com\zking\test\controller" />
+      <recent name="C:\Users\15408\Desktop\Y2金融项目\SSM-master\src\main\java\com\zking\test\biz\impl" />
+      <recent name="C:\Users\15408\Desktop\Y2金融项目\SSM-master\src\main\java\com\zking\test\biz" />
+      <recent name="C:\Users\15408\Desktop\Y2金融项目\SSM-master\src\main\java\com\zking\test\mapper" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zking.test.biz.impl" />
@@ -440,6 +457,31 @@
         </option>
       </MavenSettings>
     </configuration>
+    <configuration name="IAdminBizTest.doLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.zking.test.biz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="shiro02" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.zking.test.biz" />
+      <option name="MAIN_CLASS_NAME" value="com.zking.test.biz.IAdminBizTest" />
+      <option name="METHOD_NAME" value="doLogin" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="IAdminBizTest.tree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -468,7 +510,7 @@
     <configuration name="IContractBizImplTest.selectByContractManagement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.zking.test.biz.impl.*" />
+          <option name="PATTERN" value="com.zking.test.biz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -703,18 +745,20 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Maven.未命名" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.IRoleBizTest.ByRoleId" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.IAdminBizTest.tree" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.IContractBizImplTest.selectByContractManagement" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.IAdminBizTest.doLogin" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.IContractBizImplTest.selectByContractManagement" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.IAdminBizTest.tree" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.IRoleBizTest.ByRoleId" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.IAdminBizTest.doLogin" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.IContractBizImplTest.selectByContractManagement" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.IAdminBizTest.tree" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.IRoleBizTest.ByRoleId" />
       </list>
     </recent_temporary>
   </component>
@@ -736,7 +780,12 @@
       <workItem from="1572674584553" duration="8439000" />
       <workItem from="1572789691919" duration="4585000" />
       <workItem from="1572826940364" duration="8860000" />
-      <workItem from="1572848407137" duration="9587000" />
+      <workItem from="1572848407137" duration="9892000" />
+      <workItem from="1573000116503" duration="15894000" />
+      <workItem from="1573086255937" duration="6436000" />
+      <workItem from="1573112133208" duration="4833000" />
+      <workItem from="1573191466309" duration="10580000" />
+      <workItem from="1573263502038" duration="24854000" />
     </task>
     <task id="LOCAL-00001" summary="P2P项目完成内容：后台登录,菜单栏,合同管理">
       <created>1572614944848</created>
@@ -745,18 +794,25 @@
       <option name="project" value="LOCAL" />
       <updated>1572614944848</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="11.08更新提交">
+      <created>1573215530302</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573215530302</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IContractBizImplTest_selectByContractManagement - 2019.11.01 at 19h 44m 30s.xml">
-      <configuration name="IContractBizImplTest.selectByContractManagement" configurationId="JUnit" />
+    <history-entry file="IAdminBizTest_doLogin - 2019.11.09 at 10h 03m 21s.xml">
+      <configuration name="IAdminBizTest.doLogin" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IContractBizImplTest_selectByContractManagement - 2019.11.01 at 19h 52m 13s.xml">
-      <configuration name="IContractBizImplTest.selectByContractManagement" configurationId="JUnit" />
+    <history-entry file="IAdminBizTest_doLogin - 2019.11.09 at 10h 05m 15s.xml">
+      <configuration name="IAdminBizTest.doLogin" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IRoleBizTest_ByRoleId - 2019.10.30 at 16h 32m 32s.xml">
-      <configuration name="IRoleBizTest.ByRoleId" configurationId="JUnit" />
+    <history-entry file="IAdminBizTest_doLogin - 2019.11.09 at 10h 05m 49s.xml">
+      <configuration name="IAdminBizTest.doLogin" configurationId="JUnit" />
     </history-entry>
     <history-entry file="IRoleBizTest_ByRoleId - 2019.10.30 at 16h 32m 58s.xml">
       <configuration name="IRoleBizTest.ByRoleId" configurationId="JUnit" />
@@ -781,16 +837,16 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89553000" />
+    <option name="totallyTimeSpent" value="152455000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="15" width="1936" height="1024" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1047" extended-state="6" />
     <layout>
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.4978701" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37191013" sideWeight="0.13365282" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40561798" sideWeight="0.12939297" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3438202" sideWeight="0.8663472" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33515882" sideWeight="0.8455804" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="设计师" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -805,13 +861,13 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.48296058" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.48083067" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40561798" sideWeight="0.870607" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40561798" sideWeight="0.88178915" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="控制板" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3546326" sideWeight="0.49413735" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37326944" sideWeight="0.49413735" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.50586265" order="0" side_tool="true" content_ui="tabs" />
@@ -866,14 +922,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="P2P项目完成内容：后台登录,菜单栏,合同管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="P2P项目完成内容：后台登录,菜单栏,合同管理" />
+    <MESSAGE value="11.08更新提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="11.08更新提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/IRoleBiz.java</url>
-          <line>17</line>
+          <line>22</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
@@ -893,312 +950,209 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/shiro/AdminRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/zking/test/biz/IPermissionBizTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/PermissionController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/PermissionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/IPermissionBiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IContractBizImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="982">
-          <caret line="63" column="38" lean-forward="true" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+        <state relative-caret-position="356">
+          <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/CustomerMapperImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/DictMapperImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ContractMapperImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/IDict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/RoleBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/PermissionBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/util/FileNameUtils.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/AdminBizImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
+        <state relative-caret-position="20">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IDictImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        <state relative-caret-position="260">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/PermissionMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/IProductBiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="96" lean-forward="true" selection-start-line="24" selection-start-column="96" selection-end-line="24" selection-end-column="96" />
-          <folding>
-            <marker date="1572506635582" expanded="true" signature="2213:2355" ph="select from t_sys_permission" />
-            <marker date="1572506635582" expanded="true" signature="2476:2676" ph="select * fro... t_sys_permission" />
-            <marker date="1572506635582" expanded="true" signature="2539:2675" ph="select rt.pi... t_sys_admin_role" />
-            <marker date="1572506635582" expanded="true" signature="2815:2911" ph="SELECT* from... t_sys_permission" />
-            <marker date="1572506635582" expanded="true" signature="2999:3085" ph="delete from " />
-            <marker date="1572506635582" expanded="true" signature="3175:3527" ph="insert into t_sys_permission... " />
-            <marker date="1572506635582" expanded="true" signature="5151:5896" ph="update t_sys... " />
-            <marker date="1572506635582" expanded="true" signature="6000:6352" ph="update t_sys... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/DictController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="199">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/DictMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IProductBizImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/AdminMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="9" />
+        <state relative-caret-position="280">
+          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
-            <marker date="1572499381827" expanded="true" signature="1754:1871" ph="select from t_sys_admin" />
-            <marker date="1572499381827" expanded="true" signature="1982:2064" ph="select * fro... t_sys_admin" />
-            <marker date="1572499381827" expanded="true" signature="2187:2576" ph="select disti... t_sys_admin" />
-            <marker date="1572499381827" expanded="true" signature="2692:2926" ph="select disti... t_sys_admin" />
-            <marker date="1572499381827" expanded="true" signature="3011:3082" ph="delete from " />
-            <marker date="1572499381827" expanded="true" signature="3166:3507" ph="insert into t_sys_admin... " />
-            <marker date="1572499381827" expanded="true" signature="4846:5474" ph="update t_sys... " />
-            <marker date="1572499381827" expanded="true" signature="5570:5911" ph="update t_sys... " />
+            <element signature="e#748#749#0" expanded="false" />
+            <element signature="e#799#800#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ContractManagement.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ContractManagementMapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="56" column="43" lean-forward="true" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_PLUGINS_DIR$/MyBatis plugin/lib/iMybatis-3.21.jar!/schemas/mybatis-3-mapper.dtd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="94" column="10" lean-forward="false" selection-start-line="94" selection-start-column="10" selection-end-line="94" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/com/github/pagehelper/pagehelper/5.1.2/pagehelper-5.1.2.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="395" column="0" lean-forward="true" selection-start-line="395" selection-start-column="0" selection-end-line="395" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/DictMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="9" selection-end-column="87" />
+        <state relative-caret-position="1120">
+          <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="32" />
           <folding>
-            <marker date="1572578112494" expanded="true" signature="924:1033" ph="select from t_dict" />
-            <marker date="1572578112494" expanded="true" signature="1116:1180" ph="delete from " />
-            <marker date="1572578112494" expanded="true" signature="1262:1520" ph="insert into t_dict... " />
-            <marker date="1572578112494" expanded="true" signature="2644:3134" ph="update t_dic... " />
-            <marker date="1572578112494" expanded="true" signature="3228:3495" ph="update t_dic... " />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/util/PageBeanAspect.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ProductMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-239">
+        <state relative-caret-position="0">
+          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding>
+            <marker date="1573203190425" expanded="true" signature="1104:1215" ph="select from t_product" />
+            <marker date="1573203190425" expanded="true" signature="1335:1422" ph="select * fro... t_product" />
+            <marker date="1573203190425" expanded="true" signature="1335:1440" ph="select * fro... t_product" />
+            <marker date="1573203190425" expanded="true" signature="1524:1589" ph="delete from " />
+            <marker date="1573203190425" expanded="true" signature="1675:2018" ph="insert into t_product... " />
+            <marker date="1573203190425" expanded="true" signature="3447:4123" ph="update t_pro... " />
+            <marker date="1573203190425" expanded="true" signature="4221:4573" ph="update t_pro... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/AdminInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/upload.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ProductMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/shiro/AdminRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/util/SystemLogAspect.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/shiro/AdminToken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="80">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/System.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/RoleBizImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="352" column="30" lean-forward="false" selection-start-line="352" selection-start-column="30" selection-end-line="352" selection-end-column="30" />
+        <state relative-caret-position="676">
+          <caret line="54" column="5" lean-forward="false" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding>
+            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="e#1301#1302#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/zking/test/biz/impl/IContractBizImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="2000">
+          <caret line="130" column="26" lean-forward="false" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/Dict.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="-280">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding>
+            <marker date="1573265093995" expanded="true" signature="1473:1586" ph="select from t_sys_role" />
+            <marker date="1573265093995" expanded="true" signature="1695:1790" ph="select from t_sys_role" />
+            <marker date="1573265093995" expanded="true" signature="1894:2106" ph="select disti... t_sys_admin" />
+            <marker date="1573265093995" expanded="true" signature="2181:2249" ph="delete from " />
+            <marker date="1573265093995" expanded="true" signature="2332:2542" ph="insert into t_sys_role... " />
+            <marker date="1573265093995" expanded="true" signature="3502:3616" ph="delete from " />
+            <marker date="1573265093995" expanded="true" signature="3718:3845" ph="delete from " />
+            <marker date="1573265093995" expanded="true" signature="3949:4334" ph="update t_sys... " />
+            <marker date="1573265093995" expanded="true" signature="4427:4535" ph="insert into t_sys_admin_role... " />
+            <marker date="1573265093995" expanded="true" signature="4634:4757" ph="insert into t_sys_role_permission... " />
+            <marker date="1573265093995" expanded="true" signature="4852:5064" ph="update t_sys... " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/Permission.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zking/test/biz/IAdminBizTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/Admin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/RoleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="352">
+          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/Contract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/IAdminBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IContractBizImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/IContractBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ContractMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/AdminMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/ContractManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="11" />
+        <state relative-caret-position="400">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="55" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ContractMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
+        <state relative-caret-position="879">
           <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="81" />
           <folding>
             <marker date="1572831458673" expanded="true" signature="3755:3877" ph="select from t_contract" />
@@ -1212,96 +1166,270 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Integer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/Apply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE-sources.jar!/org/springframework/validation/Errors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
-          <caret line="51" column="19" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <caret line="245" column="21" lean-forward="false" selection-start-line="245" selection-start-column="21" selection-end-line="245" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/util/PageBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IDictImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-840">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        <state relative-caret-position="100">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/ContractManagement.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1038">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+        <state relative-caret-position="276">
+          <caret line="76" column="75" lean-forward="true" selection-start-line="76" selection-start-column="75" selection-end-line="76" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="50" />
+        <state relative-caret-position="276">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/ContractController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/IRoleBiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="80">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/DictMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ContractMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/ICustomer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state relative-caret-position="480">
+          <caret line="29" column="72" lean-forward="true" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+        <state relative-caret-position="60">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ICustomerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RoleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-          <folding>
-            <element signature="e#1728#1729#0" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="241">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/Repayment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="120">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="34" selection-end-column="37" />
           <folding>
-            <element signature="e#3990#3991#0" expanded="true" />
-            <element signature="e#4027#4028#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/CustomerM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/LedgerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/IApplyBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ApplyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="157" selection-end-column="11" />
+          <folding>
+            <marker date="1573237080300" expanded="true" signature="1367:1480" ph="select from t_apply" />
+            <marker date="1573237080300" expanded="true" signature="1564:1631" ph="delete from " />
+            <marker date="1573237080300" expanded="true" signature="1715:2195" ph="insert into t_apply... " />
+            <marker date="1573237080300" expanded="true" signature="5088:5582" ph="update t_app... " />
+            <marker date="1573237080300" expanded="true" signature="5665:5769" ph="update t_app... " />
+            <marker date="1573237080300" expanded="true" signature="5856:6000" ph="update t_app... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/model/RepaymentM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="32" />
+          <folding>
+            <element signature="e#2801#2802#0" expanded="true" />
+            <element signature="e#2839#2840#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/ApplyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/ApplyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="48" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/CustomerMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="185" column="9" lean-forward="true" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
+        <state relative-caret-position="338">
+          <caret line="108" column="88" lean-forward="true" selection-start-line="108" selection-start-column="88" selection-end-line="108" selection-end-column="88" />
           <folding>
-            <marker date="1572860767848" expanded="true" signature="3792:3914" ph="select from t_customer" />
-            <marker date="1572860767848" expanded="true" signature="4026:4124" ph="select * fro... t_customer" />
-            <marker date="1572860767848" expanded="true" signature="4208:4284" ph="delete from " />
-            <marker date="1572860767848" expanded="true" signature="4371:4957" ph="insert into t_customer... " />
-            <marker date="1572860767848" expanded="true" signature="7049:8167" ph="update t_cus... " />
-            <marker date="1572860767848" expanded="true" signature="8266:8866" ph="update t_cus... " />
-            <marker date="1572860767848" expanded="true" signature="8968:9100" ph="update t_cus... " />
+            <marker date="1573278578710" expanded="true" signature="6559:6681" ph="select from t_customer" />
+            <marker date="1573278578710" expanded="true" signature="6793:6891" ph="select * fro... t_customer" />
+            <marker date="1573278578710" expanded="true" signature="6975:7051" ph="delete from " />
+            <marker date="1573278578710" expanded="true" signature="7159:7324" ph="select a.*,c... t_customer" />
+            <marker date="1573278578710" expanded="true" signature="7159:7327" ph="select a.*,c... t_customer" />
+            <marker date="1573278578710" expanded="true" signature="7440:7623" ph="select a.*,c... t_customer" />
+            <marker date="1573278578710" expanded="true" signature="7732:7915" ph="select a.*,c... t_customer" />
+            <marker date="1573278578710" expanded="true" signature="8024:8207" ph="select a.*,c... t_customer" />
+            <marker date="1573278578710" expanded="true" signature="8316:8499" ph="select a.*,c... t_customer" />
+            <marker date="1573278578710" expanded="true" signature="8588:9174" ph="insert into t_customer... " />
+            <marker date="1573278578710" expanded="true" signature="11266:12384" ph="update t_cus... " />
+            <marker date="1573278578710" expanded="true" signature="12483:13083" ph="update t_cus... " />
+            <marker date="1573278578710" expanded="true" signature="13185:13317" ph="update t_cus... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/IRepaymentBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ICustomerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RepaymentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/ApplyBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/biz/impl/IRepaymentBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="100" column="36" lean-forward="false" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/controller/RepaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="67" column="32" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zking/test/mapper/RepaymentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+          <folding>
+            <marker date="1573288850893" expanded="true" signature="3855:3980" ph="select from t_repayment" />
+            <marker date="1573288850893" expanded="true" signature="4064:4143" ph="delete from " />
+            <marker date="1573288850893" expanded="true" signature="4231:4665" ph="insert into t_repayment... " />
+            <marker date="1573288850893" expanded="true" signature="4778:4951" ph="select a.*,c... t_customer" />
+            <marker date="1573288850893" expanded="true" signature="5061:5256" ph="select a.*,c... t_customer" />
+            <marker date="1573288850893" expanded="true" signature="5366:5561" ph="select a.*,c... t_customer" />
+            <marker date="1573288850893" expanded="true" signature="7240:8078" ph="update t_rep... " />
+            <marker date="1573288850893" expanded="true" signature="8178:8626" ph="update t_rep... " />
+            <marker date="1573288850893" expanded="true" signature="8713:8844" ph="update t_rep... " />
           </folding>
         </state>
       </provider>

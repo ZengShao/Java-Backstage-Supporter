@@ -31,7 +31,7 @@ public class IAdminBizTest extends BaseTestCase {
 
     @Test
     public void doLogin() throws Exception {
-        admin.setAdminName("zj");
+        admin.setAdminName("admin");
         admin.setAdminPassword("888888");
         String message = adminBiz.doLogin(admin);
         System.out.println(message);

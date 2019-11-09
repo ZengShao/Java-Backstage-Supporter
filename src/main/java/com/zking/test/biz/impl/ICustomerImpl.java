@@ -6,6 +6,7 @@ import com.zking.test.biz.ICustomer;
 import com.zking.test.mapper.CustomerMapper;
 import com.zking.test.model.ContractManagement;
 import com.zking.test.model.Customer;
+import com.zking.test.model.CustomerM;
 import com.zking.test.util.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -60,6 +61,72 @@ public class ICustomerImpl implements ICustomer {
         }
         return objects;
     }
+
+    @Override
+    public List<CustomerM> bindCustomer(Customer customer, PageBean pageBean) {
+        if (null != pageBean && pageBean.isPagination()){
+            PageHelper.startPage(pageBean.getPage(),pageBean.getRows());
+        }
+        List<CustomerM> objects = customerMapper.bindCustomer(customer);
+        if (null != pageBean && pageBean.isPagination()){
+            PageInfo pageInfo = new PageInfo(objects);
+            pageBean.setTotal(pageInfo.getTotal()+"");
+        }
+        return objects;
+    }
+
+    @Override
+    public List<CustomerM> bindCustomer1(Customer customer, PageBean pageBean) {
+        if (null != pageBean && pageBean.isPagination()){
+            PageHelper.startPage(pageBean.getPage(),pageBean.getRows());
+        }
+        List<CustomerM> objects = customerMapper.bindCustomer1(customer);
+        if (null != pageBean && pageBean.isPagination()){
+            PageInfo pageInfo = new PageInfo(objects);
+            pageBean.setTotal(pageInfo.getTotal()+"");
+        }
+        return objects;
+    }
+
+    @Override
+    public List<CustomerM> bindCustomer2(Customer customer, PageBean pageBean) {
+        if (null != pageBean && pageBean.isPagination()){
+            PageHelper.startPage(pageBean.getPage(),pageBean.getRows());
+        }
+        List<CustomerM> objects = customerMapper.bindCustomer2(customer);
+        if (null != pageBean && pageBean.isPagination()){
+            PageInfo pageInfo = new PageInfo(objects);
+            pageBean.setTotal(pageInfo.getTotal()+"");
+        }
+        return objects;
+    }
+
+    @Override
+    public List<CustomerM> bindCustomer3(Customer customer, PageBean pageBean) {
+        if (null != pageBean && pageBean.isPagination()){
+            PageHelper.startPage(pageBean.getPage(),pageBean.getRows());
+        }
+        List<CustomerM> objects = customerMapper.bindCustomer3(customer);
+        if (null != pageBean && pageBean.isPagination()){
+            PageInfo pageInfo = new PageInfo(objects);
+            pageBean.setTotal(pageInfo.getTotal()+"");
+        }
+        return objects;
+    }
+
+    @Override
+    public List<CustomerM> bindCustomer4(Customer customer, PageBean pageBean) {
+        if (null != pageBean && pageBean.isPagination()){
+            PageHelper.startPage(pageBean.getPage(),pageBean.getRows());
+        }
+        List<CustomerM> objects = customerMapper.bindCustomer4(customer);
+        if (null != pageBean && pageBean.isPagination()){
+            PageInfo pageInfo = new PageInfo(objects);
+            pageBean.setTotal(pageInfo.getTotal()+"");
+        }
+        return objects;
+    }
+
 
     @Override
     public int updateByCustomerStatus(Customer customer) {

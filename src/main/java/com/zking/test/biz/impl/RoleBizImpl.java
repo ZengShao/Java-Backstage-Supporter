@@ -6,6 +6,8 @@ import com.zking.test.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RoleBizImpl implements IRoleBiz {
 
@@ -45,5 +47,10 @@ public class RoleBizImpl implements IRoleBiz {
     @Override
     public int doRevokePermissionFromRole(Role role) {
         return roleMapper.doRevokePermissionFromRole(role);
+    }
+
+    @Override
+    public List<Role> selectByRoleDesc(Role role) {
+        return roleMapper.selectByRoleDesc(role);
     }
 }

@@ -10,6 +10,14 @@
     </constructor>
   </resultMap>
 
+
+  <resultMap id="ll" type="com.zking.test.model.Role" >
+    <id column="role_id"  property="roleId"  jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="role_name" property="roleName" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="role_desc" property="roleDesc" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="role_locked" property="roleLocked" jdbcType="VARCHAR" javaType="java.lang.String" />
+  </resultMap>
+
     <resultMap id="row" type="com.zking.test.model.Role" >
         <id column="role_id"  property="roleId"  jdbcType="BIGINT" javaType="java.lang.Long" />
     </resultMap>
@@ -22,6 +30,13 @@
     <include refid="Base_Column_List" />
     from t_sys_role
     where role_id = #{roleId,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectByRoleDesc" resultMap="ll" parameterType="com.zking.test.model.Role" >
+    select
+    <include refid="Base_Column_List" />
+    from t_sys_role
+    where role_desc = '审核员'
   </select>
 
     <select id="load" resultMap="row" parameterType="com.zking.test.model.Admin">

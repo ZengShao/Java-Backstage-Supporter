@@ -2,6 +2,8 @@ package com.zking.test.mapper;
 
 import com.zking.test.model.ContractManagement;
 import com.zking.test.model.Customer;
+import com.zking.test.model.CustomerM;
+import com.zking.test.util.PageBean;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -23,4 +25,13 @@ public interface CustomerMapper {
 
     int updateByCustomerStatus(Customer customer);
 
+    List<CustomerM> bindCustomer(Customer customer);
+
+    List<CustomerM> bindCustomer1(Customer customer);
+
+    List<CustomerM> bindCustomer2(Customer customer);
+
+    List<CustomerM> bindCustomer3(Customer customer);
+
+    List<CustomerM> bindCustomer4(Customer customer);
 }

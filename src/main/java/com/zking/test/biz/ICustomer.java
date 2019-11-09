@@ -1,6 +1,7 @@
 package com.zking.test.biz;
 
 import com.zking.test.model.Customer;
+import com.zking.test.model.CustomerM;
 import com.zking.test.util.PageBean;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,4 +24,10 @@ public interface ICustomer {
     List<Customer> selectByCustomer(Customer customer,PageBean pageBean);
 
     int updateByCustomerStatus(Customer customer);
+
+    List<CustomerM> bindCustomer(Customer customer, PageBean pageBean);
+    List<CustomerM> bindCustomer1(Customer customer, PageBean pageBean);
+    List<CustomerM> bindCustomer2(Customer customer, PageBean pageBean);
+    List<CustomerM> bindCustomer3(Customer customer, PageBean pageBean);
+    List<CustomerM> bindCustomer4(Customer customer, PageBean pageBean);
 }

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zking.test.mapper.RepaymentMapper" >
+  <resultMap id="BaseResultMap" type="com.zking.test.model.Repayment" >
+    <constructor >
+      <idArg column="repayment_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="customer_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="apply_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="repayment_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="repayment_money" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="residue_money" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="admin_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="residue_state" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    </constructor>
+  </resultMap>
+
+  <resultMap id="ll" type="com.zking.test.model.RepaymentM" >
+    <id column="repayment_id" property="repaymentId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="customer_id" property="customerId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="apply_id" property="applyId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="residue_money" property="residueMoney" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="repayment_money" property="repaymentMoney" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="repayment_time" property="repaymentTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    <result column="admin_id" property="adminId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="residue_state" property="residueState" jdbcType="INTEGER" javaType="java.lang.Integer" />
+
+    <result column="customer_id" property="customerId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="customer_name" property="customerName" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_tel" property="customerTel" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="customer_password" property="customerPassword" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_salt" property="customerSalt" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_level" property="customerLevel" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    <result column="customer_id_number" property="customerIdNumber" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_address" property="customerAddress" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_bank" property="customerBank" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_time" property="customerTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    <result column="customer_borrow_money" property="customerBorrowMoney" jdbcType="VARCHAR" javaType="java.lang.String"/>
+    <result column="customer_periods" property="customerPeriods" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="customer_status" property="customerStatus" javaType="java.lang.String" jdbcType="VARCHAR" />
+    <result column="customer_card_photo" property="customerCardPhoto" javaType="java.lang.String" jdbcType="VARCHAR" />
+    <result column="customer_bank_photo" property="customerBankPhoto" javaType="java.lang.String" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    repayment_id, customer_id, apply_id, repayment_time, repayment_money, residue_money, 
+    admin_id, residue_state
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_repayment
+    where repayment_id = #{repaymentId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_repayment
+    where repayment_id = #{repaymentId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.zking.test.model.Repayment" >
+    insert into t_repayment (repayment_id, customer_id, apply_id, 
+      repayment_time, repayment_money, residue_money, 
+      admin_id, residue_state)
+    values (#{repaymentId,jdbcType=BIGINT}, #{customerId,jdbcType=BIGINT}, #{applyId,jdbcType=BIGINT}, 
+      #{repaymentTime,jdbcType=TIMESTAMP}, #{repaymentMoney,jdbcType=VARCHAR}, #{residueMoney,jdbcType=VARCHAR}, 
+      #{adminId,jdbcType=BIGINT}, #{residueState,jdbcType=INTEGER})
+  </insert>
+
+  <select id="bindRepayment" resultMap="ll" parameterType="com.zking.test.model.Customer">
+        select a.*,c.*
+    from t_customer c inner join t_repayment a on a.customer_id=c.customer_id
+    where c.customer_name  like concat('%',#{customerName,jdbcType=VARCHAR},'%')
+  </select>
+
+  <select id="bindRepayment1" resultMap="ll" parameterType="com.zking.test.model.Customer">
+    select a.*,c.*
+    from t_customer c inner join t_repayment a on a.customer_id=c.customer_id and residue_state = 1
+    where c.customer_name  like concat('%',#{customerName,jdbcType=VARCHAR},'%')
+  </select>
+
+  <select id="bindRepayment2" resultMap="ll" parameterType="com.zking.test.model.Customer">
+    select a.*,c.*
+    from t_customer c inner join t_repayment a on a.customer_id=c.customer_id and residue_state = 2
+    where c.customer_name  like concat('%',#{customerName,jdbcType=VARCHAR},'%')
+  </select>
+
+  <insert id="insertSelective" parameterType="com.zking.test.model.Repayment" >
+    insert into t_repayment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="repaymentId != null" >
+        repayment_id,
+      </if>
+      <if test="customerId != null" >
+        customer_id,
+      </if>
+      <if test="applyId != null" >
+        apply_id,
+      </if>
+      <if test="repaymentTime != null" >
+        repayment_time,
+      </if>
+      <if test="repaymentMoney != null" >
+        repayment_money,
+      </if>
+      <if test="residueMoney != null" >
+        residue_money,
+      </if>
+      <if test="adminId != null" >
+        admin_id,
+      </if>
+      <if test="residueState != null" >
+        residue_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="repaymentId != null" >
+        #{repaymentId,jdbcType=BIGINT},
+      </if>
+      <if test="customerId != null" >
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="applyId != null" >
+        #{applyId,jdbcType=BIGINT},
+      </if>
+      <if test="repaymentTime != null" >
+        #{repaymentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="repaymentMoney != null" >
+        #{repaymentMoney,jdbcType=VARCHAR},
+      </if>
+      <if test="residueMoney != null" >
+        #{residueMoney,jdbcType=VARCHAR},
+      </if>
+      <if test="adminId != null" >
+        #{adminId,jdbcType=BIGINT},
+      </if>
+      <if test="residueState != null" >
+        #{residueState,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zking.test.model.Repayment" >
+    update t_repayment
+    <set >
+      <if test="customerId != null" >
+        customer_id = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="applyId != null" >
+        apply_id = #{applyId,jdbcType=BIGINT},
+      </if>
+      <if test="repaymentTime != null" >
+        repayment_time = #{repaymentTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="repaymentMoney != null" >
+        repayment_money = #{repaymentMoney,jdbcType=VARCHAR},
+      </if>
+      <if test="residueMoney != null" >
+        residue_money = #{residueMoney,jdbcType=VARCHAR},
+      </if>
+      <if test="adminId != null" >
+        admin_id = #{adminId,jdbcType=BIGINT},
+      </if>
+      <if test="residueState != null" >
+        residue_state = #{residueState,jdbcType=INTEGER},
+      </if>
+    </set>
+    where repayment_id = #{repaymentId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zking.test.model.Repayment" >
+    update t_repayment
+    set customer_id = #{customerId,jdbcType=BIGINT},
+      apply_id = #{applyId,jdbcType=BIGINT},
+      repayment_time = #{repaymentTime,jdbcType=TIMESTAMP},
+      repayment_money = #{repaymentMoney,jdbcType=VARCHAR},
+      residue_money = #{residueMoney,jdbcType=VARCHAR},
+      admin_id = #{adminId,jdbcType=BIGINT},
+      residue_state = #{residueState,jdbcType=INTEGER}
+    where repayment_id = #{repaymentId,jdbcType=BIGINT}
+  </update>
+  <update id="update" parameterType="com.zking.test.model.Repayment">
+    update t_repayment
+    set residue_state = #{residueState,jdbcType=INTEGER}
+    where repayment_id = #{repaymentId,jdbcType=BIGINT}
+  </update>
+</mapper>

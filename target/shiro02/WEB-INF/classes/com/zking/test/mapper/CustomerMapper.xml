@@ -38,6 +38,36 @@
     <result column="customer_card_photo" property="customerCardPhoto" javaType="java.lang.String" jdbcType="VARCHAR" />
     <result column="customer_bank_photo" property="customerBankPhoto" javaType="java.lang.String" jdbcType="VARCHAR" />
   </resultMap>
+
+  <resultMap id="ll" type="com.zking.test.model.CustomerM" >
+    <id column="apply_id" property="applyId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="adm_id" property="admId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    <result column="customer_id" property="customerId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="product_id" property="productId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="admin_id" property="adminId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="apply_time" property="applyTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    <result column="approve_time" property="approveTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    <result column="interest" property="interest" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="per_money" property="perMoney" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="state" property="state" jdbcType="INTEGER" javaType="java.lang.Integer" />
+
+    <result column="customer_id" property="customerId" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="customer_name" property="customerName" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_tel" property="customerTel" jdbcType="BIGINT" javaType="java.lang.Long" />
+    <result column="customer_password" property="customerPassword" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_salt" property="customerSalt" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_level" property="customerLevel" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    <result column="customer_id_number" property="customerIdNumber" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_address" property="customerAddress" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_bank" property="customerBank" jdbcType="VARCHAR" javaType="java.lang.String" />
+    <result column="customer_time" property="customerTime" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    <result column="customer_borrow_money" property="customerBorrowMoney" jdbcType="VARCHAR" javaType="java.lang.String"/>
+    <result column="customer_periods" property="customerPeriods" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    <result column="customer_status" property="customerStatus" javaType="java.lang.String" jdbcType="VARCHAR" />
+    <result column="customer_card_photo" property="customerCardPhoto" javaType="java.lang.String" jdbcType="VARCHAR" />
+    <result column="customer_bank_photo" property="customerBankPhoto" javaType="java.lang.String" jdbcType="VARCHAR" />
+  </resultMap>
+
   <sql id="Base_Column_List" >
     customer_id, customer_name, customer_tel, customer_password, customer_salt, customer_level,
     customer_id_number, customer_address, customer_bank, customer_time,customer_borrow_money,customer_periods,customer_status,customer_bank_photo,customer_card_photo
@@ -55,6 +85,38 @@
     delete from t_customer
     where customer_id = #{customerId,jdbcType=BIGINT}
   </delete>
+
+  <select id="bindCustomer" resultMap="ll" parameterType="com.zking.test.model.Customer">
+    select a.*,c.*
+    from t_customer c inner join t_apply a on a.customer_id=c.customer_id
+    where c.customer_name like concat('%',#{customerName,jdbcType=VARCHAR},'%')
+  </select>
+
+  <select id="bindCustomer1" resultMap="ll" parameterType="com.zking.test.model.Customer">
+        select a.*,c.*
+    from t_customer c inner join t_apply a on a.customer_id=c.customer_id and  a.state=5
+    where c.customer_name like concat('%',#{customerName,jdbcType=VARCHAR},'%')
+  </select>
+
+  <select id="bindCustomer2" resultMap="ll" parameterType="com.zking.test.model.Customer">
+    select a.*,c.*
+    from t_customer c inner join t_apply a on a.customer_id=c.customer_id and  a.state=3
+    where c.customer_name like concat('%',#{customerName,jdbcType=VARCHAR},'%')
+  </select>
+
+  <select id="bindCustomer3" resultMap="ll" parameterType="com.zking.test.model.Customer">
+    select a.*,c.*
+    from t_customer c inner join t_apply a on a.customer_id=c.customer_id and  a.state=2
+    where c.customer_name like concat('%',#{customerName,jdbcType=VARCHAR},'%')
+  </select>
+
+  <select id="bindCustomer4" resultMap="ll" parameterType="com.zking.test.model.Customer">
+    select a.*,c.*
+    from t_customer c inner join t_apply a on a.customer_id=c.customer_id and  a.state=4
+    where c.customer_name like concat('%',#{customerName,jdbcType=VARCHAR},'%')
+  </select>
+
+
   <insert id="insert" parameterType="com.zking.test.model.Customer" >
     insert into t_customer (customer_id, customer_name, customer_tel, 
       customer_password, customer_salt, customer_level, 
